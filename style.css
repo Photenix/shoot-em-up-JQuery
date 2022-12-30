@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+}
+
+body{
+    
+}
+
+#player{
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: sticky;
+}
+
+.bullet{
+    background-color: rgb(248, 101, 16);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+
+    border-radius: 0 50% 50% 0;
+}
+
+@keyframes rotateAsteroit  {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.asteroid{
+    /*background-color: brown;*/
+    background-color: yellow;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    animation: 3s linear infinite rotateAsteroit;
+    animation-name: rotateAsteroit;
+}
+
+
+.asteroid:hover{
+    box-shadow: 0px 0px 6px #fff;
+}
+
+
+#room{
+    margin: 0 20px;
+    position: relative;
+    /*overflow: hidden;*/
+
+    box-shadow: 0px 0px 6px #fff;
+    
+    height: 280px;
+    width: 200px;
+
+    border: 1px solid black;
+}
+
+#screen{
+    width: calc( 100% - 40px );
+    background-color: rgb(11, 5, 34);
+    padding: 80px 20px;
+}
+
+
+.eye{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+
+    top: 250px;
+    left: 500px;
+
+}
+
+.state{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    font-size: 40px;
+    color: rgb(194, 194, 194);
+
+    background-color: rgb(127, 127, 236);
+}
+
+.state h3{
+    color: rgb(92, 192, 79);
+}
